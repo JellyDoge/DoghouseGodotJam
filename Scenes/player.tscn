@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0n2apex7msa2"]
+
+[ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="1_l0b4t"]
+[ext_resource type="Texture2D" uid="uid://xofptq0a8cjv" path="res://Sprites/Player/player.png" id="1_ofl3m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7p5v4"]
+size = Vector2(16, 16)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_l0b4t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ofl3m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7p5v4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+enabled = false
